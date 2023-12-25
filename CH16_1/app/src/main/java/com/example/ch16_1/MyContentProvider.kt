@@ -16,7 +16,7 @@ class MyContentProvider : ContentProvider() {
     override fun insert(uri: Uri, values: ContentValues?): Uri? {
         val book = values ?: return null
         val rowId = dbrw.insert("myTable", null, book)
-        return Uri.parse("content://com.italkutalk.lab16/$rowId")
+        return Uri.parse("content://com.example.ch16/$rowId")
     }
     override fun update(
         uri: Uri, values: ContentValues?, selection: String?,
